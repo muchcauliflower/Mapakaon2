@@ -2,75 +2,96 @@ import 'package:flutter/material.dart';
 
 class DirectionsWidget extends StatelessWidget {
   final VoidCallback onBack;
+  final List<String> stepInstructions;
 
-  const DirectionsWidget({super.key, required this.onBack});
+  const DirectionsWidget({
+    super.key,
+    required this.onBack,
+    required this.stepInstructions,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 0,
-      left: 0,
-      right: 0,
-      top: MediaQuery.of(context).size.height * 0.25, // overlay top 75%
-      child: Container(
-        decoration: const BoxDecoration(
-          color: Color(0xFFF2F2F2),
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black26,
-              blurRadius: 8,
-              offset: Offset(0, -2),
-            ),
-          ],
-        ),
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            // Top row with back button
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return NotificationListener<DraggableScrollableNotification>(
+      onNotification: (notification) {
+        // Optional: debug print size changes
+        return true;
+      },
+      child: DraggableScrollableSheet(
+        initialChildSize: 0.25,
+        minChildSize: 0.2,
+        maxChildSize: 0.75,
+        snap: true,
+        snapSizes: const [0.25, 0.5, 0.75],
+        builder: (context, scrollController) {
+          return Material(
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+            elevation: 12,
+            color: Colors.white,
+            child: Column(
               children: [
-                Text(
-                  'Step-by-Step Directions',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.close),
-                  onPressed: onBack,
-                ),
-              ],
-            ),
-            const Divider(),
-
-            // Placeholder list of directions
-            Expanded(
-              child: ListView.separated(
-                itemCount: 5, // for now just dummy steps
-                separatorBuilder: (_, __) => const Divider(),
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: CircleAvatar(
-                      radius: 14,
-                      backgroundColor: Colors.black,
-                      child: Text(
-                        '${index + 1}',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
+                // 👉 Grab handle that *can* initiate drag
+                GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onVerticalDragStart: (_) {},
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    child: Center(
+                      child: Container(
+                        width: 40,
+                        height: 5,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[400],
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),
-                    title: Text('Proceed to step ${index + 1}'),
-                    subtitle: const Text('Jeepney route or walking segment'),
-                  );
-                },
-              ),
+                  ),
+                ),
+
+                // 🔙 Header with back button
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back),
+                        onPressed: onBack,
+                      ),
+                      const SizedBox(width: 8),
+                      const Text(
+                        'Step-by-Step Directions',
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const Divider(height: 1),
+
+                // 📜 Scrollable list of steps
+                Expanded(
+                  child: ListView.builder(
+                    controller: scrollController,
+                    itemCount: stepInstructions.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            '${index + 1}',
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        title: Text(stepInstructions[index]),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }

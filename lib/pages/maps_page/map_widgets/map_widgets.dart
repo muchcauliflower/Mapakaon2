@@ -121,14 +121,13 @@ class MapSearchBar extends StatelessWidget {
 
 // Carousel widget
 class CarouselDisplay extends StatefulWidget {
-  final VoidCallback onGetDirections;
+  final void Function(LatLng destination) onGetDirections;
 
   const CarouselDisplay({super.key, required this.onGetDirections});
 
   @override
   State<CarouselDisplay> createState() => _CarouselDisplayState();
 }
-
 
 class _CarouselDisplayState extends State<CarouselDisplay> {
   final PageController _pageController = PageController(viewportFraction: 0.8);
@@ -189,7 +188,8 @@ class _CarouselDisplayState extends State<CarouselDisplay> {
                       ),
                       child: PoiCard(
                         data: poiList[index],
-                        onGetDirections: widget.onGetDirections,
+                        destination: poiList[index].poiCoord,
+                        onGetDirections: (dest) => widget.onGetDirections(dest),
                       ),
                     ),
                   ),

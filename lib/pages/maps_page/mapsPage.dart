@@ -30,6 +30,7 @@ class _mapsPageState extends State<mapsPage> {
   List<LatLng> currentRoutePolyline = [];
   bool isAddingMarkers = false;
   static const _apiKey = ORSapiKey;
+  List<String> stepInstructions = [];
 
   // UI Control flags
   bool _showStepByStepList = false;
@@ -59,8 +60,27 @@ class _mapsPageState extends State<mapsPage> {
       storedRoutes: storedRoutes,
       onStepPathReady: (stepPath) {
         debugPrint('📍 Step-by-step polyline has ${stepPath.length} points');
+
+        List<String> generatedSteps = [];
+
+        if (clickedPoints.length == 2) {
+          final start = clickedPoints[0];
+          final end = clickedPoints[1];
+
+          const routeName = 'ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Pavia to Parola)';
+
+          generatedSteps.add('🚶 Walking to $routeName at ${start.toString()}');
+          generatedSteps.add('🛻 Riding $routeName from ${start.toString()} to ${end.toString()}');
+          generatedSteps.add('🚶 Walking to final destination at ${end.toString()}');
+
+          debugPrint('🚶 Walking to $routeName at ${start.toString()}');
+          debugPrint('🛻 Riding $routeName from ${start.toString()} to ${end.toString()}');
+          debugPrint('🚶 Walking to final destination at ${end.toString()}');
+        }
+
         setState(() {
           currentRoutePolyline = stepPath;
+          stepInstructions = generatedSteps;
         });
       },
       onError: (msg) => debugPrint(msg),
@@ -143,7 +163,11 @@ class _mapsPageState extends State<mapsPage> {
             ),
 
             if (_showSearchBar) const MapSearchBar(),
-            if (_showCarousel) CarouselDisplay(onGetDirections: _showDirections),
+            if (_showCarousel)
+              CarouselDisplay(
+                onGetDirections: (LatLng _) => _showDirections(),
+              ),
+
             if (_showBottomNav)
               MapBottomNavBar(
                 onTabSelected: widget.onTabSelected,
@@ -152,7 +176,10 @@ class _mapsPageState extends State<mapsPage> {
 
             // 📍 Step-by-step directions
             if (_showStepByStepList)
-              DirectionsWidget(onBack: _hideDirections),
+              DirectionsWidget(
+                onBack: _hideDirections,
+                stepInstructions: stepInstructions,
+              ),
           ],
         ),
       ),

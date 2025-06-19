@@ -4,12 +4,14 @@ import '../../../data/Resto Dummy Data/poiClass.dart';
 
 class PoiCard extends StatelessWidget {
   final PoiData data;
-  final VoidCallback? onGetDirections;
+  final void Function(LatLng)? onGetDirections;
+  final LatLng? destination; // Add this
 
   const PoiCard({
     super.key,
     required this.data,
     this.onGetDirections,
+    this.destination,
   });
 
   @override
@@ -138,8 +140,8 @@ class PoiCard extends StatelessWidget {
                           // 2. Hide BottomNavigationBar and poi_cards
                           // 3. Show ListView of step-by-step directions
                           print('Get Directions tapped!');
-                          if (onGetDirections != null) {
-                            onGetDirections!();
+                          if (onGetDirections != null && destination != null) {
+                            onGetDirections!(destination!); // ✅ Pass the destination to the callback
                           }
                         },
                         child: Container(
