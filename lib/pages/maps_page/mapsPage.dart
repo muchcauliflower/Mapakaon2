@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:mapakaon2/data/keys.dart';
+import 'package:mapakaon2/pages/maps_page/map_helpers.dart';
+import 'package:mapakaon2/pages/maps_page/map_widgets/directionsWidget.dart';
 import 'package:mapakaon2/pages/maps_page/map_widgets/map_widgets.dart';
 import 'package:mapakaon2/pages/maps_page/routing/routeStorage.dart';
-import 'package:mapakaon2/pages/maps_page/map_helpers.dart';
-
 import '../../utils/screenDimensions.dart';
 
 class mapsPage extends StatefulWidget {
@@ -31,6 +31,11 @@ class _mapsPageState extends State<mapsPage> {
   bool isAddingMarkers = false;
   static const _apiKey = ORSapiKey;
 
+  // UI Control flags
+  bool _showStepByStepList = false;
+  bool _showSearchBar = true;
+  bool _showCarousel = true;
+  bool _showBottomNav = true;
 
   @override
   void initState() {
@@ -38,7 +43,6 @@ class _mapsPageState extends State<mapsPage> {
     _mapController = MapController();
     isAddingMarkers = true;
 
-    // Load routes from assets
     MapHelpers.loadDefaultRoutesFromAssets(
       storedRoutes: storedRoutes,
       setState: setState,
@@ -63,15 +67,33 @@ class _mapsPageState extends State<mapsPage> {
     );
   }
 
+  void _showDirections() {
+    setState(() {
+      _showStepByStepList = true;
+      _showSearchBar = false;
+      _showCarousel = false;
+      _showBottomNav = false;
+    });
+  }
+
+  void _hideDirections() {
+    setState(() {
+      _showStepByStepList = false;
+      _showSearchBar = true;
+      _showCarousel = true;
+      _showBottomNav = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    SizeConfig.init(context); // 📏 Initialize screen size config
+    SizeConfig.init(context);
 
     return Scaffold(
       body: SizedBox.expand(
         child: Stack(
           children: [
-            // 🌍 Main Map
+            // 🌍 Map
             Positioned.fill(
               child: FlutterMap(
                 mapController: _mapController,
@@ -120,18 +142,17 @@ class _mapsPageState extends State<mapsPage> {
               ),
             ),
 
-            // 🔍 Search Bar
-            MapSearchBar(),
+            if (_showSearchBar) const MapSearchBar(),
+            if (_showCarousel) CarouselDisplay(onGetDirections: _showDirections),
+            if (_showBottomNav)
+              MapBottomNavBar(
+                onTabSelected: widget.onTabSelected,
+                currentIndex: widget.currentIndex,
+              ),
 
-            // carousel viewer
-            carouselDisplay(),
-
-
-            // 🔽 Bottom NavBar
-            MapBottomNavBar(
-              onTabSelected: widget.onTabSelected,
-              currentIndex: widget.currentIndex,
-            ),
+            // 📍 Step-by-step directions
+            if (_showStepByStepList)
+              DirectionsWidget(onBack: _hideDirections),
           ],
         ),
       ),

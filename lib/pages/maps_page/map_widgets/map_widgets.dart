@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:latlong2/latlong.dart';
+import 'package:mapakaon2/pages/maps_page/map_widgets/poi_cards.dart';
 import 'package:mapakaon2/utils/appColors.dart';
 
+import '../../../data/Resto Dummy Data/poiClass.dart';
+import '../../../data/Resto Dummy Data/poiData.dart';
 import '../../../utils/screenDimensions.dart';
 
 PreferredSizeWidget buildMapAppBar({
@@ -116,15 +120,18 @@ class MapSearchBar extends StatelessWidget {
 }
 
 // Carousel widget
-class carouselDisplay extends StatefulWidget {
-  const carouselDisplay({super.key});
+class CarouselDisplay extends StatefulWidget {
+  final VoidCallback onGetDirections;
+
+  const CarouselDisplay({super.key, required this.onGetDirections});
 
   @override
-  State<carouselDisplay> createState() => _carouselDisplayState();
+  State<CarouselDisplay> createState() => _CarouselDisplayState();
 }
 
-class _carouselDisplayState extends State<carouselDisplay> {
-  final PageController _pageController = PageController(viewportFraction: 0.7); // change how thicc or thin the carousel box is
+
+class _CarouselDisplayState extends State<CarouselDisplay> {
+  final PageController _pageController = PageController(viewportFraction: 0.8);
   double _currentPage = 0;
 
   @override
@@ -153,16 +160,15 @@ class _carouselDisplayState extends State<carouselDisplay> {
       left: w * 0.06,
       right: w * 0.06,
       child: SizedBox(
-        height: h * 15,
+        height: h * 20,
         child: PageView.builder(
           controller: _pageController,
-          itemCount: 10,
+          itemCount: poiList.length,
           itemBuilder: (context, index) {
             final double distanceFromCurrent = (_currentPage - index).abs();
             final double scale = 1 - (distanceFromCurrent * 0.3).clamp(0.0, 0.3);
-            final double opacity = 1 - (distanceFromCurrent * 0.5).clamp(0.0, 0.5);
-            final double horizontalShift = (index - _currentPage) * -10;
-
+            final double opacity = index == _currentPage.round() ? 1 : 0.5;
+            final double horizontalShift = (index - _currentPage) * -40;
             final bool isFocused = index == _currentPage.round();
 
             return Transform.translate(
@@ -172,32 +178,18 @@ class _carouselDisplayState extends State<carouselDisplay> {
                 child: Opacity(
                   opacity: opacity,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 3),
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xA0C88022),
+                        color: Colors.transparent,
                         borderRadius: BorderRadius.circular(20),
                         border: isFocused
-                            ? Border.all(color: Color(0xFF223442), width: 2)
+                            ? Border.all(color: const Color(0xFF223442), width: 2)
                             : null,
-                        boxShadow: [
-                          if (distanceFromCurrent < 0.5)
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.3),
-                              blurRadius: 10,
-                              offset: const Offset(0, 5),
-                            ),
-                        ],
                       ),
-                      child: Center(
-                        child: Text(
-                          'Card $index',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                      child: PoiCard(
+                        data: poiList[index],
+                        onGetDirections: widget.onGetDirections,
                       ),
                     ),
                   ),
@@ -210,7 +202,6 @@ class _carouselDisplayState extends State<carouselDisplay> {
     );
   }
 }
-
 
 class MapBottomNavBar extends StatelessWidget {
   final Function(int) onTabSelected;
