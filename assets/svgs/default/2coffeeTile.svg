@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="Icons"
+   viewBox="0 0 32 32"
+   xml:space="preserve"
+   height="128"
+   width="128"
+   sodipodi:docname="coffeTile.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs19" /><sodipodi:namedview
+   id="namedview17"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="6.1328125"
+   inkscape:cx="43.780892"
+   inkscape:cy="64.163057"
+   inkscape:window-width="1712"
+   inkscape:window-height="931"
+   inkscape:window-x="1920"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Icons" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<line
+   class="st0"
+   x1="3"
+   y1="29"
+   x2="23"
+   y2="29"
+   id="line4"
+   style="stroke:#fba02a;stroke-opacity:1" />
+<path
+   class="st0"
+   d="M4,11v6.2C4,22,8,26,13,26c5,0,9-4,9-8.8V11H4z"
+   id="path6"
+   style="stroke:#fba02a;stroke-opacity:1" />
+<path
+   class="st0"
+   d="M25,21L25,21c-1.7,0-3-1.3-3-3v-3c0-1.6,1.3-3,3-3h0c1.6,0,3,1.3,3,3v3C28,19.7,26.7,21,25,21z"
+   id="path8"
+   style="stroke:#fba02a;stroke-opacity:1" />
+<path
+   class="st0"
+   d="M13,2L13,2c-1.2,1.8-1.2,4.2,0,6l0,0"
+   id="path10"
+   style="stroke:#fba02a;stroke-opacity:1" />
+<path
+   class="st0"
+   d="M9,2L9,2C7.8,3.8,7.8,6.2,9,8l0,0"
+   id="path12"
+   style="stroke:#fba02a;stroke-opacity:1" />
+<path
+   class="st0"
+   d="M17,2L17,2c-1.2,1.8-1.2,4.2,0,6l0,0"
+   id="path14"
+   style="stroke:#fba02a;stroke-opacity:1" />
+</svg>

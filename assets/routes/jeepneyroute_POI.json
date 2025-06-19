@@ -1,0 +1,248 @@
+[
+
+
+  {
+    "routeName": "ROUTE 1 BO. OBRERO, LAPUZ TO CITY PROPER LOOP",
+    "coordinates": [
+      {"latitude": 10.698820256424371, "longitude": 122.58709151059426},
+      {"latitude": 10.701824454912886, "longitude": 122.57409633206103},
+      {"latitude": 10.701638157845238, "longitude": 122.56904039048818},
+      {"latitude": 10.693978449855722, "longitude": 122.5709195642567},
+      {"latitude": 10.6920191701988, "longitude": 122.56926594836808},
+      {"latitude": 10.691971525870676, "longitude": 122.56798941220691},
+      {"latitude": 10.695093003896226, "longitude": 122.56782137134891},
+      {"latitude": 10.701455144247607, "longitude": 122.56768275741618},
+      {"latitude": 10.701528501241507, "longitude": 122.56900240452653},
+      {"latitude": 10.702576798546588, "longitude": 122.56948865990634},
+      {"latitude": 10.707151717176268, "longitude": 122.56920651807447},
+      {"latitude": 10.702257067218188, "longitude": 122.57156463581522},
+      {"latitude": 10.701821183303478, "longitude": 122.57407415186589}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 2 VILLA PLAZA TO CITY PROPER VIA CALUMPANG LOOP",
+    "coordinates": [
+      {"latitude": 10.68893083228876, "longitude": 122.51707621418734},
+      {"latitude": 10.680302101913034, "longitude": 122.51741142410279},
+      {"latitude": 10.689442791359895, "longitude": 122.5486555917688},
+      {"latitude": 10.696381312472017, "longitude": 122.56876560126628},
+      {"latitude": 10.692586818369486, "longitude": 122.56898154660402},
+      {"latitude": 10.691686212744068, "longitude": 122.57339911403396},
+      {"latitude": 10.692654050391317, "longitude": 122.5730159211782},
+      {"latitude": 10.692028485548898, "longitude": 122.56938783389843}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 2 VILLA PLAZA TO CITY PROPER VIA CALUMPANG LOOP (Returning)",
+    "coordinates": [
+      {"latitude": 10.696441105549297, "longitude": 122.56861336463986},
+      {"latitude": 10.693440106565335, "longitude": 122.558198954302},
+      {"latitude": 10.689497808677343, "longitude": 122.5485684533737},
+      {"latitude": 10.680265467088324, "longitude": 122.51743107756498},
+      {"latitude": 10.687097603866874, "longitude": 122.51682044924671},
+      {"latitude": 10.687623809251873, "longitude": 122.52126572485041},
+      {"latitude": 10.68899202639679, "longitude": 122.52079041727514},
+      {"latitude": 10.688894412162853, "longitude": 122.51693568197267}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP",
+    "coordinates": [
+      {"latitude": 10.754508320294585, "longitude": 122.53838050996038},
+      {"latitude": 10.738230550346064, "longitude": 122.54346327396442},
+      {"latitude": 10.721100566613126, "longitude": 122.55911701601953},
+      {"latitude": 10.706420785919107, "longitude": 122.56736564477282},
+      {"latitude": 10.696339617032148, "longitude": 122.56921503984542},
+      {"latitude": 10.692385574177305, "longitude": 122.58278243361099},
+      {"latitude": 10.690428481219206, "longitude": 122.57698845539186},
+      {"latitude": 10.691719327352725, "longitude": 122.57781319189536},
+      {"latitude": 10.692020173575445, "longitude": 122.57360570365897},
+      {"latitude": 10.699987277700064, "longitude": 122.5691147791812},
+      {"latitude": 10.707335473088762, "longitude": 122.56719378983037}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Returning)",
+    "coordinates": [
+      {"latitude": 10.70741227117388, "longitude": 122.56720328217239},
+      {"latitude": 10.724897641505457, "longitude": 122.55762372383577},
+      {"latitude": 10.726728925017126, "longitude": 122.55798070755489},
+      {"latitude": 10.727784105318468, "longitude": 122.55532980788159},
+      {"latitude": 10.752521591799333, "longitude": 122.53987970777021}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 4 UNGKA TO CITY PROPER VIA B. AQUINO AVE./ FESTIVE WALK LOOP",
+    "coordinates": [
+      {"latitude": 10.754519610110778, "longitude": 122.53824414949169},
+      {"latitude": 10.724998334006191, "longitude": 122.5494697390686},
+      {"latitude": 10.715513169795592, "longitude": 122.54591243499033},
+      {"latitude": 10.713874161898854, "longitude": 122.55205358384758},
+      {"latitude": 10.692752211487829, "longitude": 122.55521717638507},
+      {"latitude": 10.69473676366199, "longitude": 122.56466337954178},
+      {"latitude": 10.693270284401446, "longitude": 122.56676242073871},
+      {"latitude": 10.697699775116119, "longitude": 122.5677828262647},
+      {"latitude": 10.697262585162493, "longitude": 122.55482221504914}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 5 FESTIVE WALK TO CITY PROPER VIA B. AQUINO AVE. AND SM CITY LOOP",
+    "coordinates": [
+      {"latitude": 10.717276403951946, "longitude": 122.54697967566395},
+      {"latitude": 10.714190514289697, "longitude": 122.55235532683707},
+      {"latitude": 10.701533575392508, "longitude": 122.567955680393},
+      {"latitude": 10.696327417972036, "longitude": 122.56922977801594},
+      {"latitude": 10.692159924620995, "longitude": 122.57342175752541},
+      {"latitude": 10.69200917826312, "longitude": 122.56931675236089},
+      {"latitude": 10.696283423039185, "longitude": 122.56902454801624},
+      {"latitude": 10.696314209756501, "longitude": 122.56825792907833},
+      {"latitude": 10.6959865878598, "longitude": 122.56481524763844},
+      {"latitude": 10.69736453663141, "longitude": 122.56195238920475},
+      {"latitude": 10.700546068691029, "longitude": 122.5605229169932},
+      {"latitude": 10.716061637128362, "longitude": 122.55273949237053},
+      {"latitude": 10.706272349591915, "longitude": 122.54931180255468},
+      {"latitude": 10.70467940354772, "longitude": 122.54483438782394},
+      {"latitude": 10.717182318059358, "longitude": 122.54697738701304}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 7 COMPANIA TO CITY PROPER LOOP",
+    "coordinates": [
+      {"latitude": 10.692302769290942, "longitude": 122.57339105412261},
+      {"latitude": 10.69181143321102, "longitude": 122.57276976615779},
+      {"latitude": 10.696264687582712, "longitude": 122.56912959206016},
+      {"latitude": 10.69561382937849, "longitude": 122.56170711760508},
+      {"latitude": 10.696977162581458, "longitude": 122.55888473442808},
+      {"latitude": 10.694602937866328, "longitude": 122.54568140121432},
+      {"latitude": 10.688018423478626, "longitude": 122.53625382402356},
+      {"latitude": 10.691206107607535, "longitude": 122.5340186719788},
+      {"latitude": 10.697298724636903, "longitude": 122.543281134594},
+      {"latitude": 10.694572198867206, "longitude": 122.54569808426466}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 7 COMPANIA TO CITY PROPER LOOP (Returning)",
+    "coordinates": [
+      {"latitude": 10.694602937866328, "longitude": 122.54568140121432},
+      {"latitude": 10.696977162581458, "longitude": 122.55888473442808},
+      {"latitude": 10.69561382937849, "longitude": 122.56170711760508},
+      {"latitude": 10.696264687582712, "longitude": 122.56912959206016},
+      {"latitude": 10.69181143321102, "longitude": 122.57276976615779},
+      {"latitude": 10.692302769290942, "longitude": 122.57339105412261}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 9 MOHON TO CITY PROPER LOOP",
+    "coordinates": [
+      {"latitude": 10.692950449254539, "longitude": 122.49968693890129},
+      {"latitude": 10.689706188985548, "longitude": 122.51437850496389},
+      {"latitude": 10.701159885678628, "longitude": 122.56901612929087},
+      {"latitude": 10.693426960579567, "longitude": 122.57182953482251},
+      {"latitude": 10.691685975849435, "longitude": 122.57331747143057},
+      {"latitude": 10.691950545203493, "longitude": 122.56790810349085},
+      {"latitude": 10.69786614662041, "longitude": 122.56758716052825},
+      {"latitude": 10.693467841545868, "longitude": 122.56630549154988},
+      {"latitude": 10.694996746811624, "longitude": 122.56479884786981},
+      {"latitude": 10.694853255110651, "longitude": 122.55506689663174}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 9 MOHON TO CITY PROPER LOOP (Returning)",
+    "coordinates": [
+      {"latitude": 10.694853255110651, "longitude": 122.55506689663174},
+      {"latitude": 10.699644001287336, "longitude": 122.552939654097},
+      {"latitude": 10.689706188985548, "longitude": 122.51437850496389},
+      {"latitude": 10.692950449254539, "longitude": 122.49968693890129}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 11 TICUD, LA PAZ TO CITY PROPER LOOP",
+    "coordinates": [
+      {"latitude": 10.717594633166796, "longitude": 122.5800798577598},
+      {"latitude": 10.714170895568293, "longitude": 122.58141409633406},
+      {"latitude": 10.71591041088425, "longitude": 122.56894366213346},
+      {"latitude": 10.72051719304985, "longitude": 122.56578529067998},
+      {"latitude": 10.718373676926841, "longitude": 122.56398012009608},
+      {"latitude": 10.710732804578482, "longitude": 122.57021150068304},
+      {"latitude": 10.709379197055396, "longitude": 122.5666687903243},
+      {"latitude": 10.703792181525772, "longitude": 122.56792475269279},
+      {"latitude": 10.697467279074266, "longitude": 122.56167405792108},
+      {"latitude": 10.69460512915188, "longitude": 122.56163322857594},
+      {"latitude": 10.696340195758651, "longitude": 122.56866889802608},
+      {"latitude": 10.692099006417406, "longitude": 122.56908885668757},
+      {"latitude": 10.691684989617123, "longitude": 122.57351731357352},
+      {"latitude": 10.69200436546612, "longitude": 122.57484052869721},
+      {"latitude": 10.690513788380592, "longitude": 122.57685509842064},
+      {"latitude": 10.689905932761935, "longitude": 122.57628705056452},
+      {"latitude": 10.693818479925046, "longitude": 122.57113660296744},
+      {"latitude": 10.702839862142412, "longitude": 122.56813028000178}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 11 TICUD, LA PAZ TO CITY PROPER LOOP (Returning)",
+    "coordinates": [
+      {"latitude": 10.702839862142412, "longitude": 122.56813028000178},
+      {"latitude": 10.709379197055396, "longitude": 122.5666687903243},
+      {"latitude": 10.710732804578482, "longitude": 122.57021150068304},
+      {"latitude": 10.718373676926841, "longitude": 122.56398012009608},
+      {"latitude": 10.72051719304985, "longitude": 122.56578529067998},
+      {"latitude": 10.71591041088425, "longitude": 122.56894366213346},
+      {"latitude": 10.714170895568293, "longitude": 122.58141409633406},
+      {"latitude": 10.717594633166796, "longitude": 122.5800798577598}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 15 MOLO TO CITY PROPER VIA BALUARTE LOOP",
+    "coordinates": [
+      {"latitude": 10.6988757379904, "longitude": 122.54922220281993},
+      {"latitude": 10.697281786540978, "longitude": 122.54346056880297},
+      {"latitude": 10.695237814715561, "longitude": 122.54487555748818},
+      {"latitude": 10.69641377112786, "longitude": 122.56898364142613},
+      {"latitude": 10.692550203385101, "longitude": 122.56904308213218},
+      {"latitude": 10.69200411200777, "longitude": 122.57160246223798},
+      {"latitude": 10.692599714350527, "longitude": 122.57302936924621},
+      {"latitude": 10.691724937544807, "longitude": 122.57326156513788},
+      {"latitude": 10.692034404029625, "longitude": 122.56960117577025}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 15 MOLO TO CITY PROPER VIA BALUARTE LOOP (Returning)",
+    "coordinates": [
+      {"latitude": 10.692034404029625, "longitude": 122.56960117577025},
+      {"latitude": 10.696431868342934, "longitude": 122.56862342150009},
+      {"latitude": 10.692343610775298, "longitude": 122.55219986109115},
+      {"latitude": 10.697008886399837, "longitude": 122.54366979322468},
+      {"latitude": 10.6988757379904, "longitude": 122.54922220281993}
+    ]
+  },
+
+  {
+    "routeName": "ROUTE 25 MOLO TO CITY PROPER VIA GENERAL LUNA LOOP",
+    "coordinates": [
+      {"latitude": 10.696043568728149, "longitude": 122.54437343677266},
+      {"latitude": 10.70067590578212, "longitude": 122.56165788774106},
+      {"latitude": 10.701480239646166, "longitude": 122.56778331064181},
+      {"latitude": 10.696451097019127, "longitude": 122.56864815221284},
+      {"latitude": 10.692338422881212, "longitude": 122.57334128251075},
+      {"latitude": 10.692049581543579, "longitude": 122.56927513355792},
+      {"latitude": 10.69642827004429, "longitude": 122.5686468451923},
+      {"latitude": 10.693529141432581, "longitude": 122.55910404773985},
+      {"latitude": 10.692277811796055, "longitude": 122.54809362808055},
+      {"latitude": 10.696043568728149, "longitude": 122.54437343677266}
+    ]
+  }
+]

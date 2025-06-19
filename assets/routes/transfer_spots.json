@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Mohon Terminal",
+    "latitude": 10.693237246973313,
+    "longitude": 122.49982645940129,
+    "routes": [
+      "ROUTE 9 MOHON TO CITY PROPER LOOP (Mohon Terminal to Infante Str.)","ROUTE 9 MOHON TO CITY PROPER LOOP (Infante Str. to Mohon Terminal)"
+    ],
+    "priority": "major"
+  },
+
+  {
+    "name": "Arroyo Fountain",
+    "latitude": 10.70156767852373,
+    "longitude": 122.56906812549104,
+    "routes": [
+      "ROUTE 1 BO. OBRERO, LAPUZ TO CITY PROPER LOOP (Everlasting Str. to PH29+83M)", "ROUTE 1 BO. OBRERO, LAPUZ TO CITY PROPER LOOP (PH29+83M to Everlasting Str.)",
+      "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Pavia to Parola)", "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Parola to Pavia)",
+      "ROUTE 5 FESTIVE WALK TO CITY PROPER VIA B. AQUINO AVE. AND SM CITY (Festive to JD Cafe Gen. Luna)",
+      "ROUTE 9 MOHON TO CITY PROPER LOOP (Mohon Terminal to Infante Str.)",
+      "ROUTE 11 LA PAZ – ILOILO CITY PROPER VIA ISATU (No. 119 Luna St. La Paz to MHVC+FP2, Muelle Loney Str.)", "ROUTE 11 LA PAZ – ILOILO CITY PROPER VIA ISATU (MHVC+FP2, Muelle Loney Str. to No. 119 Luna St. La Paz)",
+      "Route 25 (BALUARTE DERECHO) Molo – Iloilo City Proper via General Luna (Escoto Natividad Building to Plaza Libtertad, Zamora Str)"
+    ],
+    "priority": "major"
+  },
+
+  {
+    "name": "Festive Walk Transport Hub",
+    "latitude": 10.717092394861293,
+    "longitude": 122.54715124486596,
+    "routes": [
+      "ROUTE 4 UNGKA-ILOILO CITY VIA DIVERSION FESTIVE WALK TRANSPORT HUB LOOP (GT to UPV)",
+      "ROUTE 5 FESTIVE WALK TO CITY PROPER VIA B. AQUINO AVE. AND SM CITY (Festive to JD Cafe Gen. Luna)", "ROUTE 5 FESTIVE WALK TO CITY PROPER VIA B. AQUINO AVE. AND SM CITY (JD Cafe Gen. Luna to Festive)"
+    ],
+    "priority": "major"
+  },
+
+  {
+    "name": "Robinsons Pavia/GT Mall",
+    "latitude": 10.753783749931248,
+    "longitude": 122.53935848442366,
+    "routes": [
+      "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Pavia to Parola)", "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Parola to Pavia)",
+      "ROUTE 4 UNGKA-ILOILO CITY VIA DIVERSION FESTIVE WALK TRANSPORT HUB LOOP (GT to UPV)", "ROUTE 4 UNGKA-ILOILO CITY VIA DIVERSION FESTIVE WALK TRANSPORT HUB LOOP (UPV to GT)"
+    ],
+    "priority": "major"
+  },
+
+  {
+    "name": "Unitop Ledesma",
+    "latitude": 10.696575343580388,
+    "longitude": 122.56872652835031,
+    "routes": [
+      "ROUTE 1 BO. OBRERO, LAPUZ TO CITY PROPER LOOP (Everlasting Str. to PH29+83M)",
+      "ROUTE 2 CALAPARAN CALUMPANG – ILOILO CITY PROPER (Arevalo to Unitop)", "ROUTE 2 CALAPARAN CALUMPANG – ILOILO CITY PROPER (Unitop to Arevalo)",
+      "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Pavia to Parola)", "ROUTE 3 UNGKA TO CITY PROPER VIA CPU LOOP (Parola to Pavia)",
+      "ROUTE 5 FESTIVE WALK TO CITY PROPER VIA B. AQUINO AVE. AND SM CITY (Festive to JD Cafe Gen. Luna)",
+      "ROUTE 7 COMPANIA – ILOILO CITY PROPER LOOP (Plaza Libertad to Locsin St.)", "ROUTE 7 COMPANIA – ILOILO CITY PROPER LOOP (Locsin St. to Plaza Libertad)",
+      "ROUTE 9 MOHON TO CITY PROPER LOOP (Mohon Terminal to Infante Str.)",
+      "ROUTE 11 LA PAZ – ILOILO CITY PROPER VIA ISATU (No. 119 Luna St. La Paz to MHVC+FP2, Muelle Loney Str.)", "ROUTE 11 LA PAZ – ILOILO CITY PROPER VIA ISATU (MHVC+FP2, Muelle Loney Str. to No. 119 Luna St. La Paz)",
+      "ROUTE 15 (LIKO) MOLO – ILOILO CITY PROPER VIA BALUARTE LOOP JEEPNEY ROUTE (Iloilo National High to Gaisano Iloilo)", "ROUTE 15 (LIKO) MOLO – ILOILO CITY PROPER VIA BALUARTE LOOP JEEPNEY ROUTE (Gaisano Iloilo to Iloilo National High)",
+      "Route 25 (BALUARTE DERECHO) Molo – Iloilo City Proper via General Luna (Escoto Natividad Building to Plaza Libtertad, Zamora Str)", "Route 25 (BALUARTE DERECHO) Molo – Iloilo City Proper via General Luna (Plaza Libtertad, Zamora Str to Escoto Natividad Building)"
+    ],
+    "priority": "major"
+  }
+]
